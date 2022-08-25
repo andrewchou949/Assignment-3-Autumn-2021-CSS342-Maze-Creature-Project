@@ -1,0 +1,103 @@
+Sun 31 Oct 2021 09:54:18 PM PDT
+*** compiling with clang++ to create an executable called myprogram
+clang version 7.0.1-8+deb10u2 (tags/RELEASE_701/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+*** running clang-tidy using options from .clang-tidy
+LLVM (http://llvm.org/):
+  LLVM version 7.0.1
+  
+  Optimized build.
+  Default target: x86_64-pc-linux-gnu
+  Host CPU: skylake-avx512
+6392 warnings generated.
+13138 warnings generated.
+20625 warnings generated.
+/home/NETID/kchou61/ass3/creature.cpp:36:3: warning: do not use 'else' after 'return' [readability-else-after-return]
+  else if(Maze.isClear(Row - 1, Col)){
+  ^~~~~~~
+/home/NETID/kchou61/ass3/creature.h:22:24: warning: non-const reference parameter 'p', make it const or use a pointer [google-runtime-references]
+  void addPath(string &p);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:24:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string solve(Maze &Maze);
+                     ^
+/home/NETID/kchou61/ass3/creature.h:26:24: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goNorth(Maze &Maze);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:27:24: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goSouth(Maze &Maze);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:28:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goEast(Maze &Maze);
+                      ^
+/home/NETID/kchou61/ass3/creature.h:29:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goWest(Maze &Maze);
+                      ^
+/home/NETID/kchou61/ass3/creature.h:22:24: warning: non-const reference parameter 'p', make it const or use a pointer [google-runtime-references]
+  void addPath(string &p);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:24:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string solve(Maze &Maze);
+                     ^
+/home/NETID/kchou61/ass3/creature.h:26:24: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goNorth(Maze &Maze);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:27:24: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goSouth(Maze &Maze);
+                       ^
+/home/NETID/kchou61/ass3/creature.h:28:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goEast(Maze &Maze);
+                      ^
+/home/NETID/kchou61/ass3/creature.h:29:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+  string goWest(Maze &Maze);
+                      ^
+/home/NETID/kchou61/ass3/maze.cpp:4:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <fstream>
+^        ~~~~~~~~~
+         "maze.h"
+/home/NETID/kchou61/ass3/maze.cpp:14:14: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+      Out << Maze.Field[Row][Col];
+             ^
+/home/NETID/kchou61/ass3/maze.cpp:26:1: warning: constructor does not initialize these fields: Field, Width, Height, ExitRow, ExitColumn [cppcoreguidelines-pro-type-member-init]
+Maze::Maze(const string &FileName) {
+^
+/home/NETID/kchou61/ass3/maze.cpp:39:18: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+      InFile.get(Field[Row][Col]);
+                 ^
+/home/NETID/kchou61/ass3/maze.cpp:56:10: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  return Field[Row][Col] == ' ';
+         ^
+/home/NETID/kchou61/ass3/maze.cpp:60:3: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  Field[Row][Col] = '*';
+  ^
+/home/NETID/kchou61/ass3/maze.cpp:64:3: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+  Field[Row][Col] = '+';
+  ^
+Suppressed 20599 warnings (20599 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+*** running myprogram
+Path: WEEEENNNEEEEEESEESSSEEENNNNN
+xxxxxxxxxxxxxxxxxx*x
+x     x*******xxxx*x
+x xxxxx*xxxxx***xx*x
+x xxxxx*xxxxxxx*xx*x
+x x*****     xx*xx*x
+x xxxxxxxxxx xx****x
+xxxxxxxxxxxxxxxxxxxx
+
+
+Path: SEEENNNWWWWN
+xxx*xxxxxxxxxxxxxxxx
+x  *****      xxxx x
+x xxxxx*xxxxx   xx x
+x xxxxx*xxxxxxx xx x
+x x+****     xx xx x
+x xxxxxxxxxx xx    x
+xxxxxxxxxxxxxxxxxxxx
+
+
+Done!
+*** cleaning up, deleting myprogram
+Sun 31 Oct 2021 09:54:25 PM PDT
