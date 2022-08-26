@@ -1,6 +1,9 @@
 # Maze
-
 Goals: Understand recursion and solve a maze
+
+Assignment 3 of CSS 342 class Autumn 2021 Quarter for UWB
+
+This assignment illustrate a maze solver algorithm, where maze are being provided in form of txt file and creature.cpp file is the class to exhausively explore the maze to find the exit.
 
 Given a text file representing a maze, as below, find the path for
 creature to get to the exit and mark the path explored.
